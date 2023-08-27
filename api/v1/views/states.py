@@ -47,7 +47,7 @@ def create_state():
     else:
         new_state = State()
         new_state.name = data["name"]
-        storage.new(data)
+        storage.new(new_state)
         storage.save
         return jsonify(new_state.to_dict()), 201
 
