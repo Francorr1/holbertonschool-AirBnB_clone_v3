@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Satus """
 from api.v1.views import app_views
+from models import storage
 from models.state import State
 from models.amenity import Amenity
 from models.city import City
@@ -12,6 +13,7 @@ from models.review import Review
 @app_views.route("/status")
 def status():
     return {"status": "OK"}
+
 
 @app_views.route("/stats")
 def count():
