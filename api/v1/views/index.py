@@ -15,7 +15,7 @@ def status():
 
 @app_views.route("/stats")
 def count():
-    return {
+    stats = {
         "amenities": storage.count(Amenity),
         "cities": storage.count(City),
         "places": storage.count(Place),
@@ -23,3 +23,4 @@ def count():
         "states": storage.count(State),
         "users": storage.count(User)
     }
+    return stats
